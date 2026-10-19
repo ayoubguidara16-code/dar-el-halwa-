@@ -29,6 +29,7 @@
            <form action="traitement.php" method="post">
                 <fieldset>
                     <legend>Vos coordonnées</legend>
+<<<<<<< HEAD
                     <p>
                         <label for="nom">Nom :</label>
                         <input type="text" id="nom" name="nom" required minlength="2">
@@ -83,6 +84,55 @@
                         </select>
                         </p>
 
+=======
+
+                    <label for="nom">Nom :</label>
+                    <input type="text" id="nom" name="nom" required minlength="2">
+
+                    <label for="prenom">Prénom :</label>
+                    <input type="text" id="prenom" name="prenom" required minlength="2">
+
+                    <label for="email">Adresse électronique :</label>
+                    <input type="email" id="email" name="email" required placeholder="vous@exemple.tn">
+
+                    <label for="telephone">Téléphone :</label>
+                    <input type="tel" id="telephone" name="telephone" required pattern="\+216[0-9]{8}" title="+216 suivi de 8 chiffres" placeholder="+21622550211">
+
+                    <label for="cp">Code postal :</label>
+                    <input type="text" id="cp" name="cp" required pattern="[0-9]{4}" title="Code postal à 4 chiffres" placeholder="3000">
+
+                    <label for="adresse">Adresse de livraison :</label>
+                    <textarea id="adresse" name="adresse" rows="3" cols="40" required></textarea>
+
+                    <label for="gouvernorat">Gouvernorat :</label>
+
+                    <select id="gouvernorat" name="gouvernorat">
+                        <option value="Ariana">Ariana</option>
+                        <option value="Béja">Béja</option>
+                        <option value="Ben Arous">Ben Arous</option>
+                        <option value="Bizerte">Bizerte</option>
+                        <option value="Gabès">Gabès</option>
+                        <option value="Gafsa">Gafsa</option>
+                        <option value="Jendouba">Jendouba</option>
+                        <option value="Kairouan">Kairouan</option>
+                        <option value="Kasserine">Kasserine</option>
+                        <option value="Kébili">Kébili</option>
+                        <option value="Le Kef">Le Kef</option>
+                        <option value="Mahdia">Mahdia</option>
+                        <option value="La Manouba">La Manouba</option>
+                        <option value="Médenine">Médenine</option>
+                        <option value="Monastir">Monastir</option>
+                        <option value="Nabeul">Nabeul</option>
+                        <option value="Sfax" selected>Sfax</option>
+                        <option value="Sidi Bouzid">Sidi Bouzid</option>
+                        <option value="Siliana">Siliana</option>
+                        <option value="Sousse">Sousse</option>
+                        <option value="Tataouine">Tataouine</option>
+                        <option value="Tozeur">Tozeur</option>
+                        <option value="Tunis">Tunis</option>
+                        <option value="Zaghouan">Zaghouan</option>
+                    </select>
+>>>>>>> 2f5c8fe6243073c8f8aa227eeacdc5fb9310acfe
 
                 </fieldset>
 
@@ -90,6 +140,7 @@
                     <legend>Votre gateau</legend>
                     <fieldset>
                         <legend>Occasion</legend>
+<<<<<<< HEAD
                         <p>
                             <label for="occ-anniv">Anniversaire</label>
                             <input type="radio" id="occ-anniv" name="occasion" value="anniversaire" required>
@@ -177,6 +228,52 @@
                         <button type="submit">Envoyer ma commande</button>
                         <button type="reset">Tout effacer</button>
                     </p>
+=======
+                        <label for="occ-anniv">Anniversaire</label>
+                        <input type="radio" id="occ-anniv" name="occasion" value="anniversaire" required>
+
+                        <label for="occ-mariage">Mariage</label>
+                        <input type="radio" id="occ-mariage" name="occasion" value="mariage">
+
+                        <label for="occ-fiancailles">Fiançailles</label>
+                        <input type="radio" id="occ-fiancailles" name="occasion" value="fiancailles">
+
+                        <label for="occ-autre">Autre</label>
+                        <input type="radio" id="occ-autre" name="occasion" value="autre">
+                    </fieldset>
+
+                    <label for="date-retrait">Date de retrait</label>
+                    <input type="date" id="date-retrait" name="date_retrait" min="2026-09-01" required>
+
+                    <label for="nb-parts">Nombre de parts</label>
+                    <input type="number" id="nb-parts" name="nb_parts" min="6" max="100" step="2" value="12">
+                    <fieldset>
+                        <legend>Parfums souhaites</legend>
+                        <label for="parfum-chocolat">Chocolat</label>
+                        <input type="checkbox" id="parfum-chocolat" name="parfums[]" value="chocolat" checked>
+                        <label for="parfum-vanille">Vanille</label>
+                        <input type="checkbox" id="parfum-vanille" name="parfums[]" value="vanille">
+                        <label for="parfum-pistache">Pistache</label>
+                        <input type="checkbox" id="parfum-pistache" name="parfums[]" value="pistache">
+                        <label for="parfum-fruits">Fruits rouges</label>
+                        <input type="checkbox" id="parfum-fruits" name="parfums[]" value="fruits_rouges">
+                    </fieldset>
+                    <label for="sucre">Niveau de sucre</label>
+                    <input type="range" id="sucre" name="sucre" min="0" max="10" step="1" value="5">
+
+                    <label for="glacage">Couleur du glaçage</label>
+                    <input type="color" id="glacage" name="glacage" value="#c8912a">
+
+                    <label for="message">Message sur le gâteau</label>
+                    <input type="text" id="message" name="message" maxlength="30">
+
+                    <label for="photo">Photo de modèle</label>
+                    <input type="file" id="photo" name="photo" accept="image/*">
+                                            
+                </fieldset>
+                <fieldset>
+                    <legend>Confirmation</legend>
+>>>>>>> 2f5c8fe6243073c8f8aa227eeacdc5fb9310acfe
                 </fieldset>
            </form>
         </main>
