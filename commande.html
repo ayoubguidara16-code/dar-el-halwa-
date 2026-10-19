@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Commande - Dar El Halwa</title>
+    </head>
+    <body>
+        <header>
+            <h1>Dar El Halwa</h1>
+            <p>patisserie fine tunisienne depuis 1900</p>
+            <figure>
+                <img src="images/patisserie.jpg" alt="Notre vitrine de mignardises traditionnelles.">
+                <figcaption>Notre vitrine de mignardises traditionnelles.</figcaption>
+            </figure>
+        </header>
+        <nav id="nav">
+            <ul>
+                <li><a href="index.html#apropos">À propos</a></li>
+                <li><a href="index.html#products">Nos produits</a></li>
+                <li><a href="index.html#services">Nos services</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+                <li><a href="carte.html">Carte de prix</a></li>
+                <li><a href="index.html">Accueil</a></li>
+            </ul>
+        </nav>
+        <main>
+           <h2>Commander un gateau personnalise</h2>
+           <form action="traitement.php" method="post">
+                <fieldset>
+                    <legend>Vos coordonnées</legend>
+                    <p>
+                        <label for="nom">Nom :</label>
+                        <input type="text" id="nom" name="nom" required minlength="2">
+                    </p>
+                    <p>
+                        <label for="prenom">Prénom :</label>
+                        <input type="text" id="prenom" name="prenom" required minlength="2">
+                    </p>
+                    <p>
+                        <label for="email">Adresse électronique :</label>
+                        <input type="email" id="email" name="email" required placeholder="vous@exemple.tn">
+                    </p>
+                    <p>
+                        <label for="telephone">Téléphone :</label>
+                        <input type="tel" id="telephone" name="telephone" required pattern="\+216[0-9]{8}" title="+216 suivi de 8 chiffres" placeholder="+21622550211">
+                    </p>
+                    <p>
+                        <label for="cp">Code postal :</label>
+                        <input type="text" id="cp" name="cp" required pattern="[0-9]{4}" title="Code postal à 4 chiffres" placeholder="3000">
+                    </p>
+                    <p>
+                        <label for="adresse">Adresse de livraison :</label>
+                        <textarea id="adresse" name="adresse" rows="3" cols="40" required></textarea>
+                    </p>
+                    <p>
+                        <label for="gouvernorat">Gouvernorat :</label>
+                        <select id="gouvernorat" name="gouvernorat">
+                            <option value="Ariana">Ariana</option>
+                            <option value="Béja">Béja</option>
+                            <option value="Ben Arous">Ben Arous</option>
+                            <option value="Bizerte">Bizerte</option>
+                            <option value="Gabès">Gabès</option>
+                            <option value="Gafsa">Gafsa</option>
+                            <option value="Jendouba">Jendouba</option>
+                            <option value="Kairouan">Kairouan</option>
+                            <option value="Kasserine">Kasserine</option>
+                            <option value="Kébili">Kébili</option>
+                            <option value="Le Kef">Le Kef</option>
+                            <option value="Mahdia">Mahdia</option>
+                            <option value="La Manouba">La Manouba</option>
+                            <option value="Médenine">Médenine</option>
+                            <option value="Monastir">Monastir</option>
+                            <option value="Nabeul">Nabeul</option>
+                            <option value="Sfax" selected>Sfax</option>
+                            <option value="Sidi Bouzid">Sidi Bouzid</option>
+                            <option value="Siliana">Siliana</option>
+                            <option value="Sousse">Sousse</option>
+                            <option value="Tataouine">Tataouine</option>
+                            <option value="Tozeur">Tozeur</option>
+                            <option value="Tunis">Tunis</option>
+                            <option value="Zaghouan">Zaghouan</option>
+                        </select>
+                        </p>
+
+
+                </fieldset>
+
+                <fieldset>
+                    <legend>Votre gateau</legend>
+                    <fieldset>
+                        <legend>Occasion</legend>
+                        <p>
+                            <label for="occ-anniv">Anniversaire</label>
+                            <input type="radio" id="occ-anniv" name="occasion" value="anniversaire" required>
+                        </p>
+                        <p>
+                            <label for="occ-mariage">Mariage</label>
+                            <input type="radio" id="occ-mariage" name="occasion" value="mariage">
+                        </p>
+                        <p>
+                            <label for="occ-fiancailles">Fiançailles</label>
+                            <input type="radio" id="occ-fiancailles" name="occasion" value="fiancailles">
+                        </p>
+                        <p>
+                            <label for="occ-autre">Autre</label>
+                            <input type="radio" id="occ-autre" name="occasion" value="autre">
+                        </p>
+                    </fieldset>
+                    <p>
+                        <label for="date-retrait">Date de retrait</label>
+                        <input type="date" id="date-retrait" name="date_retrait" min="2026-09-01" required>
+                    </p>
+                    <p>
+                        <label for="nb-parts">Nombre de parts</label>
+                        <input type="number" id="nb-parts" name="nb_parts" min="6" max="100" step="2" value="12">
+                    </p>
+                    <fieldset>
+                        <legend>Parfums souhaites</legend>
+                        <p>
+                        <label for="parfum-chocolat">Chocolat</label>
+                        <input type="checkbox" id="parfum-chocolat" name="parfums[]" value="chocolat" checked>
+                        </p>
+                        <p>
+                            <label for="parfum-vanille">Vanille</label>
+                            <input type="checkbox" id="parfum-vanille" name="parfums[]" value="vanille">
+                        </p>
+                        <p>
+                            <label for="parfum-pistache">Pistache</label>
+                            <input type="checkbox" id="parfum-pistache" name="parfums[]" value="pistache">
+                        </p>
+                        <p>
+                            <label for="parfum-fruits">Fruits rouges</label>
+                            <input type="checkbox" id="parfum-fruits" name="parfums[]" value="fruits_rouges">
+                        </p>
+                    </fieldset>
+                    <p>
+                    <label for="sucre">Niveau de sucre</label>
+                    <input type="range" id="sucre" name="sucre" min="0" max="10" step="1" value="5">
+                    </p>
+                    <p>
+                    <label for="glacage">Couleur du glaçage</label>
+                    <input type="color" id="glacage" name="glacage" value="#c8912a">
+                    </p>
+                    <p>
+                    <label for="message">Message sur le gâteau</label>
+                    <input type="text" id="message" name="message" maxlength="30">
+                    </p>
+                    <p>
+                    <label for="photo">Photo de modèle</label>
+                    <input type="file" id="photo" name="photo" accept="image/*">
+                    </p>
+                    <p>
+                        <label for="decors">Décors souhaités</label>
+                        <select multiple size="4" name="decors[]" id="decors">
+                            <option value="fleurs">Fleurs en pate a sucre</option>
+                            <option value="fruits">Fruits frais</option>
+                            <option value="perles">Perles</option>
+                            <option value="rubans">Rubans</option>
+                            <option value="figurines">Figurines</option> 
+                            <option value="chocolat">Chocolat</option>
+                            <option value="caramel">Caramel</option>
+                            <option value="sprinkles">Sprinkles</option>
+                            <option value="paillettes">Paillettes comestibles</option>
+                        </select>
+
+                    </p>
+                    <p>
+                        <label for="precisions">Précisions</label>
+                        <textarea id="precisions" name="precisions" rows="4" cols="40" maxlength="200" placeholder="Indiquez ici toute précision concernant votre commande."></textarea>
+                    </p>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Confirmation</legend>
+                    <p>
+                        <button type="submit">Envoyer ma commande</button>
+                        <button type="reset">Tout effacer</button>
+                    </p>
+                </fieldset>
+           </form>
+        </main>
+        <footer>
+            <p>&copy; 2026 Dar El Halwa</p>
+            <p>Suivez-nous :</p>
+            <ul>
+                <li><a href="https://www.facebook.com/darelhalwa" target="_blank" rel="noopener">Facebook</a></li>
+                <li><a href="https://www.instagram.com/darelhalwa" target="_blank" rel="noopener">Instagram</a></li>
+                <li><a href="https://www.linkedin.com/company/darelhalwa" target="_blank" rel="noopener">LinkedIn</a></li>
+            </ul>
+        </footer>
+    </body>
+</html>
